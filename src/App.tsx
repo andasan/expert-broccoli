@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import ReactLogo from './logo.svg';
+import { useState, useEffect } from 'react';
+// import ReactLogo from './logo.svg';
+import { ReactComponent as ReactLogo } from "./logo.svg";
 const ViteLogo = 'https://vitejs.dev/logo.svg';
 const TailwindcssLogo = 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png';
 
@@ -16,7 +17,8 @@ function App() {
       <header className="flex flex-col items-center justify-center gap-4 z-10">
         <div className="flex flow-row gap-12 items-center justify-center p-8">
           <img src={ViteLogo} className="h-40" alt="logo" />
-          <img src={ReactLogo} className="h-48" alt="logo" />
+          {/* <img src={ReactLogo} className="h-48" alt="logo" /> */}
+          <ReactLogo className="h-40"/>
           <img src={TailwindcssLogo} className="h-48" alt="logo" />
         </div>
         <p className="font-bold text-4xl">Hello Vite + React + Tailwindcss!</p>
